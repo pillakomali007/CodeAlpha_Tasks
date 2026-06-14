@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinguaAI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <div class="logo">
+            🌍 LinguaAI
+        </div>
+
+        <div class="tagline">
+            AI Translation Assistant
+        </div>
+
+        <div class="history-title">
+            Recent Translations
+        </div>
+
+        <ul id="history"></ul>
+    </aside>
+
+    <main class="main">
+
+        <div class="header">
+
+           
+
+            <p>
+                Fast • Smart • Multilingual
+            </p>
+
+        </div>
+
+        <div id="chatContainer" class="chat-container">
+
+
+            <div class="welcome-card">
+
+                <h2>Welcome to LinguaAI</h2>
+
+                <p>
+                    Enter text below and translate
+                    it into any language instantly.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="controls">
+
+            <select id="targetLang">
+
+<option value="en">English</option>
+<option value="te">Telugu</option>
+<option value="hi">Hindi</option>
+<option value="ta">Tamil</option>
+<option value="kn">Kannada</option>
+<option value="ml">Malayalam</option>
+<option value="bn">Bengali</option>
+<option value="gu">Gujarati</option>
+<option value="mr">Marathi</option>
+<option value="pa">Punjabi</option>
+
+<option value="ar">Arabic</option>
+<option value="zh-CN">Chinese</option>
+<option value="ja">Japanese</option>
+<option value="ko">Korean</option>
+<option value="ru">Russian</option>
+
+<option value="fr">French</option>
+<option value="de">German</option>
+<option value="es">Spanish</option>
+<option value="it">Italian</option>
+<option value="pt">Portuguese</option>
+<option value="nl">Dutch</option>
+
+<option value="tr">Turkish</option>
+<option value="pl">Polish</option>
+<option value="uk">Ukrainian</option>
+<option value="sv">Swedish</option>
+
+</select>
+
+            
+<button id="themeBtn"
+        onclick="toggleTheme()">
+    🌙 Dark Mode
+</button>
+            <button id="speakerBtn"
+        onclick="toggleSpeech()">
+        🔊 ON
+</button>
+
+          
+
+        </div>
+
+        <div class="input-area">
+
+            <textarea
+            id="inputText"
+            placeholder="Type your text here..."></textarea>
+
+            <button onclick="startVoiceInput()">🎤 Speak</button>
+
+            <button
+            class="translate-btn"
+            onclick="translateText()">
+
+            Translate
+
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
